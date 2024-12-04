@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday Sayang</title>
+</head>
+
+<body>
+    <!-- Timer -->
+    <div id="timer-container" class="timer">
+        Timer: <span id="countdown">10</span> detik
+    </div>
+
+    <!-- Surat -->
+    <div id="letter-container" class="hidden">
+        <div class="card">
+            <div class="imgBox">
+                <div class="bark"></div>
+                <img src="laki.png" alt="Laki-laki">
+            </div>
+            <div class="details">
+                <h4 class="color2">HAPPY BIRTHDAY SAYANG!</h4>
+                <p>Dear Ikhlass❤️</p>
+                <p>Selamat ulang tahun sayangg</p>
+                <p>Selamat berumur 24 Tahun</p>
+                <p>Semua doa terbaik buat kamuuu</p>
+                <p>Makasih atas semua hal yang kamu kasih</p>
+                <p>Pencapaian yang sekarang keren banget.</p>
+                <p>Kejar terus mimpi kamuuu yaa sayang❤️</p>
+                <p>Kita sama-sama kejar mimpi itu yaa</p>
+                <p class="text-right">-Lubna❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Timer Script
+        let countdown = 10;
+        const timerElement = document.getElementById('countdown');
+        const timerContainer = document.getElementById('timer-container');
+        const letterContainer = document.getElementById('letter-container');
+
+        const interval = setInterval(() => {
+            if (countdown > 0) {
+                countdown--;
+                timerElement.textContent = countdown;
+            } else {
+                clearInterval(interval);
+                timerContainer.classList.add('hidden');
+                letterContainer.classList.remove('hidden');
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
